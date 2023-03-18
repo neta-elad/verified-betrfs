@@ -135,7 +135,7 @@ module Circular_List {
     ensures forall x :: x in old(n.nodes) ==> x.value == old(x.value);
     modifies n, multiset(n.nodes);
   {
-    assert n.nodes[1] == n.next; // Observe
+    // assert n.nodes[1] == n.next; // Observe
     other := n.next;
     Splice(n, other);
   }

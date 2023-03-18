@@ -2202,6 +2202,7 @@ module PivotBetreeSpecRefinement {
   //   IBufferLeafEqJoin(P.ApplyRepivot(r));
 
   //   BoundedBucketListJoin(buckets1, r.leaf.pivotTable);
-  //   assert BoundedBucket(joined, r.leaf.pivotTable);*/
+  //   assert BoundedBucket(joined, r.leaf.pivotTable);
+  */
   }
 }

@@ -182,8 +182,8 @@ module PagedBetreeRefinement
     ensures ReceiptDropFirst(receipt).Valid()
   {
     var out := ReceiptDropFirst(receipt);
-    assert receipt.ResultLinkedAt(0); // trigger
-    assert receipt.ChildLinkedAt(0);  // trigger
+    // assert receipt.ResultLinkedAt(0); // trigger
+    // assert receipt.ChildLinkedAt(0);  // trigger
     forall i:nat | i < |out.lines|-1 ensures out.ChildLinkedAt(i) {
       assert receipt.ChildLinkedAt(i+1);  // trigger
     }
@@ -204,7 +204,7 @@ module PagedBetreeRefinement
       ReceiptDropFirstValid(a);
       ReceiptDropFirstValid(b);
       EqualReceipts(ReceiptDropFirst(a), ReceiptDropFirst(b));
-      assert a.ResultLinkedAt(0);  // trigger
+      // assert a.ResultLinkedAt(0);  // trigger
       assert b.ResultLinkedAt(0);  // trigger
     }
   }
